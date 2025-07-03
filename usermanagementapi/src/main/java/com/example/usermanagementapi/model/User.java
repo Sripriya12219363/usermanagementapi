@@ -19,6 +19,14 @@ public class User {
     @CreationTimestamp
     private LocalDateTime createdAt;
 
+    public User(Long id, LocalDateTime createdAt, LocalDateTime updatedAt, String name, String email) {
+        this.id = id;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.name = name;
+        this.email = email;
+    }
+
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
@@ -42,14 +50,6 @@ public class User {
 
     private String name;
     private String email;
-
-    // Constructors
-    public User() {}
-
-    public User(String name, String email) {
-        this.name = name;
-        this.email = email;
-    }
 
     // Getters & Setters
     public Long getId() {
